@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "~4.8.2",
+    "peer": "~0.2.6"
+  }
+}
