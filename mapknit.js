@@ -34,7 +34,6 @@ require(['ImageUtils', 'CCServer', 'Util', 'peerjs', 'shims'], function(ImageUti
                 // console.log(candidates);
                 if (candidates.length == 0) {
                     // fall back to regular loading
-                    console.log(ic);
                     ic.el.src = ic.src;
                 }
             });

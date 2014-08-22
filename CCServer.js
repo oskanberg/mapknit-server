@@ -9,9 +9,12 @@ define(['Util'], function(Util) {
         // }
 
         var self = this;
-        self.ws = new WebSocket('ws://localhost:1123');
-        self.ws.onerror = function() {
+        var url = document.URL.split('/')[2];
+        url = url.split(':')[0];
+        self.ws = new WebSocket('ws://' + url + ':1123');
+        self.ws.onerror = function(event) {
             Util.debug('aw shite, error', 'error');
+            Util.debug(event);
         };
         self.ws.onclose = function() {
             Util.debug('close :(', 'error');
@@ -28,7 +31,6 @@ define(['Util'], function(Util) {
             Util.debug('got message from server', 'log');
             var msg = JSON.parse(event.data);
             var subs = self.messageRegister[msg.type];
-            console.log(typeof subs[0]);
             for (var i = 0; i < subs.length; i++) {
                 // async(function() {
                     subs[i](msg);
