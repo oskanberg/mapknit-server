@@ -1,0 +1,24 @@
+{
+  "name": "mapknit client",
+  "version": "0.0.0",
+  "authors": [
+    "Oliver Skanberg-Tippen <ost500@york.ac.uk>"
+  ],
+  "description": "p2p cdn",
+  "main": "mapknit.js",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14",
+    "peerjs": "~0.3.9"
+  }
+}
