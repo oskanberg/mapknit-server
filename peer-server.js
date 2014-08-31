@@ -12,6 +12,6 @@ function startPeerServer(port) {
     });
 
     server.on('connection', function(id) {
-        console.log(id);
+        console.log('new id ' + id);
     });
 }
